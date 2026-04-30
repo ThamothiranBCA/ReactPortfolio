@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
-import { FiDownload, FiArrowRight } from 'react-icons/fi';
+import { FiDownload,} from 'react-icons/fi';
 import img from '../images/thamuaiimg.png';
 import './Hero.css';
 
