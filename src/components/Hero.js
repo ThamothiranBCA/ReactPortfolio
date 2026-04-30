@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { FiDownload, FiArrowRight } from 'react-icons/fi';
 import img from '../images/thamuaiimg.png';
 import './Hero.css';
@@ -7,10 +7,9 @@ import './Hero.css';
 const ROLES = ['Frontend Developer'];
 
 const SOCIALS = [
-  { icon: <FaGithub />,    href: 'https://github.com',    label: 'GitHub'   },
-  { icon: <FaTwitter />,   href: 'https://twitter.com',   label: 'Twitter'  },
+  { icon: <FaGithub />,    href: 'https://github.com/ThamothiranBCA',    label: 'GitHub'   },
   { icon: <FaInstagram />, href: 'https://instagram.com', label: 'Instagram'},
-  { icon: <FaLinkedinIn />,href: 'https://linkedin.com',  label: 'LinkedIn' },
+  { icon: <FaLinkedinIn />,href: 'https://www.linkedin.com/in/thamothiranbca/?skipRedirect=true',  label: 'LinkedIn' },
 ];
 
 export default function Hero() {
@@ -77,9 +76,9 @@ export default function Hero() {
             <a href="/resume.pdf" download className="btn btn-primary">
               <FiDownload /> Download CV
             </a>
-            <button className="btn btn-ghost" onClick={() => goto('projects')}>
+            {/* <button className="btn btn-ghost" onClick={() => goto('projects')}>
               View Work <FiArrowRight />
-            </button>
+            </button> */}
           </div>
         </div>
 

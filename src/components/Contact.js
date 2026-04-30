@@ -24,7 +24,6 @@ export default function Contact() {
   const submit = e => {
     e.preventDefault();
     setSending(true);
-    // 🔌 Plug in EmailJS or Formspree here
     setTimeout(() => {
       setSending(false);
       setDone(true);
@@ -85,13 +84,13 @@ export default function Contact() {
               <div className="fgroup">
                 <label>Email Address</label>
                 <input type="email" name="email" value={form.email} onChange={change}
-                  placeholder="your.email@example.com" required />
+                  placeholder="YourEmail.id" required />
               </div>
             </div>
             <div className="fgroup">
               <label>Subject</label>
               <input name="subject" value={form.subject} onChange={change}
-                placeholder="Project inquiry / Collaboration" required />
+                placeholder="" required />
             </div>
             <div className="fgroup">
               <label>Message</label>

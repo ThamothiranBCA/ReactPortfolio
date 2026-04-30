@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { FiArrowUp } from 'react-icons/fi';
 import './Footer.css';
 
-const NAV = ['Home','About','Skills','Projects','Contact'];
+const NAV = ['Home','About','Skills','Contact'];
 const SOCIALS = [
   { icon:<FaGithub />,    href:'https://github.com'   },
   { icon:<FaLinkedinIn />,href:'https://linkedin.com' },

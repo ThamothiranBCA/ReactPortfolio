@@ -41,10 +41,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button className="nav-hire btn btn-primary" onClick={() => goto('Contact')}>
-            Hire Me
-          </button>
-
           <button className="nav-burger" onClick={() => setOpen(o => !o)} aria-label="menu">
             {open ? <FiX /> : <FiMenu />}
           </button>
@@ -62,9 +58,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button className="btn btn-primary" style={{marginTop:'24px'}} onClick={() => goto('Contact')}>
-          Hire Me
-        </button>
       </div>
       {open && <div className="drawer-overlay" onClick={() => setOpen(false)} />}
     </>
