@@ -1,0 +1,126 @@
+.about { background: var(--bg2); }
+
+.about-wrap {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Image */
+.about-img-col {
+  flex-shrink: 0;
+  position: relative;
+  width: 360px;
+}
+.about-img-frame {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.about-img-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,240,255,0.08) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+.about-img-frame img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: top;
+}
+.about-exp-chip {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cyan);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff88;
+  animation: pulseDot 1.4s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%,100% { transform: scale(1); opacity:1; }
+  50%      { transform: scale(1.5); opacity:0.6; }
+}
+
+/* Text */
+.about-text-col { flex: 1; }
+
+.about-p {
+  color: var(--grey);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+/* Stats grid */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 36px 0 32px;
+}
+.astat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.astat:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+.astat-icon {
+  font-size: 1.2rem;
+  color: var(--cyan);
+}
+.astat-num {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+.astat-lbl {
+  font-size: 0.72rem;
+  color: var(--grey);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .about-wrap { flex-direction: column; gap: 60px; text-align: center; }
+  .about-img-col { width: 100%; max-width: 340px; margin: 0 auto; }
+  .about-img-frame img { height: 380px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+}
