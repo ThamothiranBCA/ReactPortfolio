@@ -1,10 +1,9 @@
 import React from 'react';
 import {
-  FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaFigma, FaSass,
+  FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaSass,
 } from 'react-icons/fa';
 import {
-  SiJavascript, SiTypescript, SiTailwindcss, SiMongodb,
-  SiFirebase, SiNextdotjs, SiRedux, SiGraphql,
+  SiJavascript, SiTypescript, SiNextdotjs,
 } from 'react-icons/si';
 import './Skills.css';
 
